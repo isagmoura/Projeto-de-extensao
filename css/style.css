@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  overflow: hidden;
+}
+
+:root {
+  --font-01: "Lato", sans-serif;
+  --font-02: "Frank Ruhl Libre", serif;
+
+  --global-color-0: #34251f;
+  --global-color-1: #eeddcc;
+  --global-color-2: #040302;
+  --global-color-3: #373636;
+  --global-color-4: #3e4359;
+  --global-color-5: #ffffff;
+}
+
+header {
+  position: absolute;
+  height: 86px;
+  width: 100%;
+  padding: 0 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+  /* background-color: #eeddcc; */
+}
+
+header .logo {
+  color: var(--global-color-0);
+  text-decoration: none;
+  font-weight: 900;
+  letter-spacing: 3px;
+  font-size: 22px;
+  font-family: var(--font-02);
+}
+
+header ul {
+  position: relative;
+}
+
+header ul li {
+  list-style: none;
+  float: left;
+  position: relative;
+}
+
+header ul li a {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 20px 25px;
+  text-decoration: none;
+  color: var(--global-color-0);
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 1024px) {
+  header {
+    padding: 10px;
+    overflow: visible;
+  }
+
+  header nav {
+    position: absolute;
+    width: 100%;
+    top: 88px;
+    left: 0;
+    display: none;
+  }
+
+  header.active nav {
+    display: block;
+  }
+
+  header .logo {
+    font-size: 22px;
+  }
+
+  header ul li {
+    width: 100%;
+  }
+
+  .menuToggle {
+    position: relative;
+    width: 32px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menuToggle::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #34251f;
+    box-shadow: 0 12px #34251f;
+    transform: translateY(-12px);
+  }
+
+  .menuToggle::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #34251f;
+    transform: translateY(12px);
+  }
+
+  header.active .menuToggle::before {
+    transform: rotate(45deg);
+    box-shadow: 0 0 #34251f;
+  }
+
+  header.active .menuToggle::after {
+    transform: rotate(315deg);
+    box-shadow: 0 0 #34251f;
+  }
+
+  section.active {
+    position: relative;
+  }
+  section.active:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #eeddcc;
+    z-index: 1;
+    opacity: 0.91;
+  }
+}
+
+.sectionFirst {
+  padding: 9rem 0% 20rem;
+  position: relative;
+  /* background-color: #eeddcc; */
+  color: var(--global-color-0);
+  /* height: 100vh; */
+}
+
+.sectionFirst::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--global-color-1);
+  z-index: -1;
+  opacity: 0.7;
+}
+
+.sectionFirst::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/img/pexels-n-voitkevich-5128267\ \(1\).jpg");
+  z-index: -1;
+  opacity: 0.7;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sectionFirst .frontPage {
+  padding: 0 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 60%;
+}
+
+.sectionFirst .frontPage {
+  color: var(--global-color-0);
+  font-size: 20px;
+  font-family: var(--font-02);
+}
+
+.impact-phrase {
+  font-size: 78px;
+  font-weight: 700;
+  line-height: 78px;
+  max-width: 730px;
+}
+
+.sectionFirst .frontPage .heading {
+  font-size: 2.5rem;
+  font-family: var(--font-02);
+  font-weight: 600;
+}
+
+.para {
+  font-size: 16px;
+}
+
+.sectionFirst .frontPage .btn {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.sectionFirst .frontPage .btn a {
+  border-radius: 40px;
+  padding: 17px 30px;
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 32px;
+  font-size: 18px;
+  color: #ffffff;
+  font-family: var(--font-02);
+}
+
+.btn a {
+  min-width: 268.52px;
+  text-align: center;
+}
+
+.sectionFirst .frontPage .btn a:nth-child(1) {
+  border: 1px solid var(--global-color-0);
+  background-color: var(--global-color-0);
+  color: var(--global-color-1);
+  transition: all 0.4s ease;
+}
+
+.sectionFirst .frontPage .btn a:nth-child(2) {
+  border: 1px solid var(--global-color-0);
+  background-color: var(--global-color-0);
+  color: var(--global-color-1);
+  transition: all 0.4s ease;
+}
+
+.waves {
+  width: 100%;
+}

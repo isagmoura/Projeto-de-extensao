@@ -1,0 +1,21 @@
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 786px) {
+  .sectionFirst .frontPage .btn {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 610px) {
+  .sectionFirst .frontPage {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 425px) {
+  .sectionFirst .frontPage {
+    max-width: 100%;
+  }
+}
