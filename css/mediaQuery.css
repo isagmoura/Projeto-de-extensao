@@ -15,7 +15,20 @@
 }
 
 @media (max-width: 425px) {
-  .sectionFirst .frontPage {
-    max-width: 100%;
+  header {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .sectionFirst {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 3rem;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .img-doing-lashes {
+    max-width: 98%;
   }
 }
